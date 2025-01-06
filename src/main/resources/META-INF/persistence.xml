@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="3.0" xmlns="https://jakarta.ee/xml/ns/persistence"
+             xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+             xsi:schemaLocation="https://jakarta.ee/xml/ns/persistence 
+             https://jakarta.ee/xml/ns/persistence/persistence_3_0.xsd">
+
+<!-- this file is used for data connection also called configuration file-->
+  <persistence-unit name="hibernate-a5"> 
+    <properties>
+      <property name="jakarta.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
+      <property name="jakarta.persistence.jdbc.url"    value="jdbc:mysql://localhost:3306/hn-one-to-one-uni" />
+      <property name="jakarta.persistence.jdbc.user"   value="root" />
+      <property name="jakarta.persistence.jdbc.password" value="Sumanrawat@123" />
+      <property name="jakarta.persistence.schema-generation.database.action" value="update" />
+      <property name="hibernate.dialect"    value="org.hibernate.dialect.MySQLDialect" /> <!-- tells version of sql if dialiect is written means work with any version of mySql-->
+      <!-- <property name="hibernate.dialect"    value="org.hibernate.dialect.MySQL9Dialect" /> here we are changing the version of sql to version 9 and we are using sql version 8 so it throw error-->
+      <property name="hibernate.show_sql"   value="true" /><!-- any query that will run will be shown on console -->
+      <property name="hibernate.format_sql" value="true" /><!-- how query will display on console -->
+    </properties>
+  </persistence-unit>
+</persistence>
